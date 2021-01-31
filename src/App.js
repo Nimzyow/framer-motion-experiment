@@ -87,15 +87,16 @@ function App() {
         </Modal>
         <Accordion />
         <CardGrid>
-          <motion.div
-            transition={{ duration: 0.3 }}
-            whileHover={{ scale: 1.4 }}
+          <Card
+            whileHover={{ scale: [1.02, 0.8, 1.2] }}
+            whileTap={{ background: "red" }}
+            onHoverEnd={() => console.log("End")}
+            style={{ background: "var(--purp)" }}
           >
-            <Card style={{ background: "var(--purp)" }}>
-              <h3>Some card</h3>
-              <img src={purp} />
-            </Card>
-          </motion.div>
+            <h3>Some card</h3>
+            <img src={purp} />
+          </Card>
+
           <Card style={{ background: "var(--blue)" }}>
             <h3>Some card</h3>
             <img src={blue} />
